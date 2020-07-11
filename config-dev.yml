@@ -1,0 +1,35 @@
+spring:
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  #数据库信息
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/p2p?characterEncoding=UTF-8&useOldAliasMetadataBehavior=true&useSSL=false
+  redis:
+    host: localhost
+    database: 1
+    port: 6379
+  #    password: 123456
+
+# mybatis 配置
+mybatis-plus:
+  mapper-locations: classpath:mapper/**/*.xml  #mapper扫包路径
+  type-aliases-package: com.dj.cloud.pojo  #开启别名
+  configuration:
+    map-underscore-to-camel-case: true   #驼峰映射
+
+logging: #sql语句
+  level:
+    com.dj.mall.mapper:
+      debug
+      
+#ribbon的超时时间
+ribbon:
+  ReadTimeout: 30000
+  ConnectTimeout: 30000
+
+swagger:
+  enabled: true
