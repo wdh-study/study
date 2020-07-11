@@ -26,7 +26,7 @@ logging: #sql语句
     com.dj.mall.mapper:
       debug
       
-#ribbon的超时时间
+#ribbon的超时时间aaa
 ribbon:
   ReadTimeout: 30000
   ConnectTimeout: 30000
