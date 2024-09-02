@@ -1,0 +1,10 @@
+步骤：
+1. tar -zxvf dockerinstall.tar.gz
+2. ./install.sh
+看到 good job！即安装完成
+docker --version   查看docker版本
+docker-compose -v  查看docker-compose版本
+
+卸载：
+1. ./uninstall.sh
+看到 good job！即卸载完成
