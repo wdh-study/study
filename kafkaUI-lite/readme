@@ -2,6 +2,9 @@
 docker run 安装：
 sudo docker run -d -p 8889:8889 dockerpull.com/joinsunsoft/kafka-ui-lite
 
+镜像改名：
+docker tag dockerpull.com/joinsunsoft/kafka-ui-lite kafka-ui-lite
+
 tar包安装
 tar -zxvf kafka-ui-lite-1.2.11-bin.tar.gz
 sh kafkaUI.sh -d start
