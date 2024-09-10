@@ -4,6 +4,8 @@
 认证模式启动：docker run -v /var/run/docker.sock:/var/run/docker.sock -v /path/to/dozzle/data:/data -p 8080:8080 amir20/dozzle --auth-provider simple
 生成users.yml文件：docker run amir20/dozzle generate admin --password password --email test@email.net --name "John Doe" > users.yml
 可操作镜像启动：docker run --volume=/var/run/docker.sock:/var/run/docker.sock -p 8080:8080 amir20/dozzle --enable-actions
+只读权限：docker run --volume=/var/run/docker.sock:/var/run/docker.sock:ro -p 8080:8080 amir20/dozzle --enable-actions
+
 
 访问地址： ip:8080 / ip:自定义端口
 
