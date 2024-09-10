@@ -1,0 +1,11 @@
+安装启动：
+非认证模式启动：docker run -d -v /var/run/docker.sock:/var/run/docker.sock -p 8080:8080 amir20/dozzle:latest
+自定义端口启动：docker run -d -v /var/run/docker.sock:/var/run/docker.sock -p 自定义端口:8080 amir20/dozzle:latest
+认证模式启动：docker run -v /var/run/docker.sock:/var/run/docker.sock -v /path/to/dozzle/data:/data -p 8080:8080 amir20/dozzle --auth-provider simple
+生成users.yml文件：docker run amir20/dozzle generate admin --password password --email test@email.net --name "John Doe" > users.yml
+可操作镜像启动：docker run --volume=/var/run/docker.sock:/var/run/docker.sock -p 8080:8080 amir20/dozzle --enable-actions
+
+访问地址： ip:8080 / ip:自定义端口
+
+官网指南：https://dozzle.dev/guide/authentication
+开源地址：https://github.com/amir20/dozzle
