@@ -1,0 +1,15 @@
+安装步骤：
+docker pull dockerpull.com/minio/minio
+
+启动：
+docker run -p 9000:9000 -p 9090:9090 \
+     --name minio \
+     -d --restart=always \
+     -e "MINIO_ACCESS_KEY=minioadmin" \
+     -e "MINIO_SECRET_KEY=minioadmin" \
+     -v /home/minio/data:/data \
+     -v /home/minio/config:/root/.minio \
+     minio/minio server \
+     /data --console-address ":9090" -address ":9000"
+
+访问地址： ip:9000
